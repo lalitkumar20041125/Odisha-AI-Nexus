@@ -1,0 +1,236 @@
+Project Vision
+Act as an experienced full-stack developer, AI/ML engineer, UI/UX designer, database architect, and technology startup strategist. Your task is to design, develop, and deliver a fully functional MVP of Odisha AI Nexus — a platform dedicated to helping Odisha build a stronger, more connected, and globally competitive artificial intelligence ecosystem.
+The goal is not simply to create another technology website. It is to build a practical platform where students can discover opportunities, researchers can showcase their work, startups can find support, industries can share real-world problems, and promising AI solutions developed in Odisha can reach national and international markets.
+The platform should be ambitious in its vision but realistic in its implementation. Every feature should serve a clear purpose, solve a genuine problem, and provide value to its users.
+1. The Purpose of Odisha AI Nexus
+Odisha has the potential to become an important contributor to India's growing AI ecosystem. However, students, researchers, startups, industries, and potential customers often operate independently, making it difficult to find the right people, identify meaningful problems, and turn promising ideas into practical solutions.
+Odisha AI Nexus aims to bridge these gaps by bringing the ecosystem together through one accessible digital platform.
+It should connect:
+Students and AI/ML professionals looking for projects, collaboration, and career opportunities.
+Startups and entrepreneurs seeking to develop and validate AI-powered products.
+Universities and researchers interested in sharing research and collaborating on applied AI.
+Industries and organizations looking for practical AI solutions to their business and operational challenges.
+Investors and incubators interested in discovering promising projects and emerging talent.
+International customers and businesses exploring AI solutions that could be developed by teams in Odisha.
+The platform should complement existing initiatives such as the Odisha AI Mission and Startup Odisha. It must remain transparent about its independent status and must not imply official government affiliation, guaranteed funding, confirmed partnerships, or institutional endorsement without verifiable evidence.
+2. Technology and Development Approach
+Build the application using a lightweight, maintainable technology stack that is easy to run on a personal laptop and can be expanded as the ecosystem grows.
+Use the following technologies:
+Python 3.11 or later for application logic.
+Streamlit for the web interface.
+Pandas for data processing and analysis.
+SQLite for persistent database storage.
+Plotly for interactive charts and visualizations.
+Scikit-learn or a transparent custom algorithm for opportunity scoring.
+ReportLab for downloadable PDF reports.
+Python's built-in CSV and JSON libraries for data exchange.
+Organize the code into logical modules instead of putting the entire application into one large file. Keep the architecture simple enough for a student or small development team to understand, maintain, and improve.
+The MVP must operate without paid APIs, external AI services, or API keys. Design the architecture so that optional LLM integrations and external data sources can be added later without rebuilding the application from scratch.
+3. Design and User Experience
+Create a polished, modern technology dashboard that feels credible to students, entrepreneurs, researchers, industry professionals, and international visitors.
+Use a dark navy visual theme with cyan and teal accents, professional typography, subtle gradients, accessible contrast, clean layouts, and responsive components.
+The interface should feel modern and intuitive rather than crowded or overly decorative. Navigation should be straightforward, charts should be easy to understand, and important actions should be clearly visible.
+Use the brand name Odisha AI Nexus and the tagline:
+Local Innovation. Global Impact.
+Do not use fabricated company logos, fake endorsements, misleading statistics, or visual elements that suggest the platform has official backing when it does not.
+4. Core Application Features
+A. Executive Dashboard
+Create a central dashboard that gives users a clear picture of the projects, talent, challenges, and opportunities registered on the platform.
+Display:
+Total registered projects.
+Project distribution across sectors.
+Number of registered talent profiles.
+Number of industry challenges.
+Global market-readiness distribution.
+High-priority opportunities.
+Sector-wise project charts.
+A ranked list of promising AI projects.
+Make the dashboard informative without overwhelming users with unnecessary metrics.
+Clearly distinguish real records submitted by users from demonstration data. Demo records must be labelled, and all metrics should indicate their data source where appropriate.
+B. AI Opportunity Explorer
+Help users evaluate AI ideas before investing significant time or money into development.
+Allow users to enter a problem statement, sector, expected social or economic impact, estimated development budget, technical feasibility, local relevance, and global market potential.
+Develop a transparent scoring algorithm that produces an opportunity score between 0 and 100.
+For every assessment, explain:
+The overall score and individual factor contributions.
+The strongest aspects of the proposed idea.
+Missing information and potential weaknesses.
+Practical next steps for validating the idea.
+Potential target markets.
+Technical, financial, operational, and adoption risks.
+The score must be presented as a prototype decision-support tool, not as a scientifically validated prediction of success.
+Make scoring factors and their weights configurable, document the calculation, and ensure that the same inputs produce the same result.
+C. AI Project Registry
+Build a working registry where users can submit, discover, and manage AI projects.
+Users should be able to:
+Register a project with its title, description, sector, development stage, and relevant details.
+Browse all registered projects.
+Search by project title or description.
+Filter projects by sector and status.
+Open individual project details.
+Update project status.
+Export project information to CSV.
+Validate required fields, reject invalid inputs, handle errors gracefully, and save submissions permanently in SQLite.
+Project records should represent actual submissions unless they are explicitly identified as demonstrations.
+D. Odisha AI Talent Exchange
+Create a space where students, developers, and researchers can present their technical abilities and find relevant projects.
+Allow registration of:
+Name.
+Institution or organization.
+District.
+Technical skills.
+Experience level.
+Portfolio URL.
+Areas of interest.
+Implement a basic matching system that compares a person's skills and interests with the requirements of registered projects.
+Show relevant matches with understandable explanations of why they were suggested.
+Protect personal information by default. Do not publicly display private contact details, and clearly explain what information is stored and how it is used.
+E. Industry Challenge Board
+Give industries and organizations a structured way to describe problems that could benefit from AI.
+Support challenges across agriculture, disaster management, manufacturing, mining, logistics, education, tourism, healthcare, and other relevant sectors.
+Each challenge should include:
+Organization name, where appropriate.
+Problem title and detailed description.
+Sector.
+Expected outcome.
+Estimated budget range.
+Urgency or priority.
+Submission date and status.
+Allow users to browse and filter challenges and persist new submissions in the database.
+Keep the system open to organizations of different sizes, including local businesses and emerging startups.
+Do not invent industry partners or represent demonstration challenges as real business requests.
+F. Global Market Readiness
+Help project owners understand what needs to be in place before offering an AI product to customers outside India.
+Create a checklist covering:
+A working prototype.
+Clearly measurable customer value.
+Product reliability and testing.
+Data protection and security.
+Technical and user documentation.
+Language and cultural localization.
+International customer support.
+Pricing and business model.
+Intellectual property and licensing.
+Applicable regulations and compliance requirements.
+Calculate a readiness score based on completed checklist items, display the remaining gaps, and recommend specific actions for improvement.
+Suggest potential international markets based on the project's sector and use case. Clearly label these suggestions as hypotheses that require customer research, regulatory review, and market validation.
+Do not present a high readiness score as proof that a product is commercially successful or legally compliant.
+G. Reports and Data Export
+Provide a dedicated reporting section for reviewing the ecosystem and sharing project information.
+Support downloadable:
+Project registry CSV files.
+Opportunity assessment summaries.
+Ecosystem metric summaries.
+PDF reports containing key findings, charts where practical, and relevant project information.
+Use real database records for actual metrics and label demonstration content clearly. Handle empty datasets and report-generation errors gracefully.
+H. About and Development Roadmap
+Explain the platform's mission, the problems it aims to solve, and how it can contribute to Odisha's AI ecosystem.
+Describe its complementary relationship with existing state initiatives without suggesting that the platform is an official government project.
+Include a phased roadmap:
+Phase 1 — Foundation: Build and test the core platform, database, project registry, talent exchange, and opportunity scoring.
+Phase 2 — Ecosystem Growth: Explore collaboration with universities, incubators, startups, and industry participants.
+Phase 3 — Data Integration: Investigate reliable public datasets and useful external information sources.
+Phase 4 — Global Expansion: Support market validation, international discovery, multilingual experiences, and customer connections.
+Phase 5 — Responsible AI: Consider advanced AI integrations, stronger governance, improved matching, and measurable ecosystem outcomes.
+Present planned activities as future possibilities, not as partnerships or commitments that already exist.
+5. AI Logic and Recommendation System
+Implement working baseline algorithms that are understandable, reproducible, and easy to maintain.
+Use:
+Weighted scoring to prioritize AI opportunities.
+Keyword and skill overlap to match talent with projects.
+Rules-based mappings between sectors, use cases, and potential markets.
+Checklist-based calculations for export readiness.
+Document the formulas, default weights, assumptions, and limitations. Keep the scoring configuration separate from the main user interface.
+The application must provide useful results even without an external language model. Any future LLM integration should be optional, use environment variables for credentials, and clearly separate AI-generated suggestions from verified facts.
+Avoid presenting simple keyword matches or weighted scores as advanced predictive intelligence.
+6. Database and Data Management
+Use SQLite to persist application data.
+Create database tables for:
+projects
+talent_profiles
+industry_challenges
+opportunity_assessments
+Include appropriate identifiers, timestamps, validation rules, and relationships where needed.
+Provide a database initialization module that creates the necessary tables automatically when the application starts.
+Include a small demonstration dataset so the platform can be explored immediately after installation. Make demo data easy to disable and clearly distinguish it from genuine user submissions.
+Prevent duplicate demo entries on repeated application starts, and ensure dashboard statistics can distinguish real records from demonstrations.
+Use parameterized SQL queries, handle database errors, and avoid exposing sensitive information in logs or public views.
+7. Security, Privacy, and Responsible Use
+Treat privacy and transparency as essential parts of the platform rather than features to add later.
+Implement:
+Input validation and safe handling of user-provided text.
+Parameterized database queries.
+Reasonable validation of URLs and numerical values.
+Protection against accidental exposure of private profile information.
+Environment-based configuration for future API keys.
+A clear privacy notice.
+An explanation of how opportunity scores and recommendations are generated.
+A statement of the limitations of the platform's algorithms.
+Do not store plaintext passwords or claim production-grade authentication unless a complete authentication system has been implemented and tested.
+If authentication is not implemented in the MVP, explain that limitation clearly. Do not treat a public demonstration deployment as suitable for collecting sensitive personal or commercially confidential information.
+8. Required Deliverables
+Do not stop at a project plan, static mockup, or collection of disconnected code snippets.
+Implement a complete, runnable MVP and provide all required source files, including:
+Main Streamlit application.
+Supporting application modules.
+Database initialization code.
+requirements.txt.
+README.md.
+Automated tests.
+Sample configuration or environment-variable documentation.
+Any required styling assets.
+The README must include:
+Prerequisites and exact installation instructions.
+Commands to launch the application locally.
+Example project and industry challenge submissions.
+Instructions for using each major feature.
+Database and demonstration-data behaviour.
+Commands for running automated tests.
+Instructions for exporting CSV and PDF reports.
+Deployment instructions for Streamlit Community Cloud or another suitable hosting provider.
+Known limitations and security considerations.
+A future integration plan covering official open datasets, universities, incubators, industry partners, and international customers.
+Keep the setup accessible to someone with a Python development environment and a personal laptop.
+9. Testing and Verification
+Before declaring the MVP complete, run the application and test its core workflows.
+At a minimum, verify that:
+The database initializes successfully.
+Demonstration data can be enabled or disabled.
+Project submissions are validated and persisted.
+Search and filtering work correctly.
+Project status updates are saved.
+Talent profiles can be registered.
+Skill-based matching returns sensible results.
+Industry challenges can be submitted and retrieved.
+Opportunity scores remain within the range of 0–100.
+Score breakdowns are consistent with the configured weights.
+Market-readiness scores reflect completed checklist items.
+CSV exports contain the expected records.
+PDF reports can be generated and downloaded.
+Empty datasets and invalid inputs do not crash the application.
+Dashboard metrics distinguish demonstration records from actual submissions.
+Fix any errors discovered during testing and report the results honestly. If a feature cannot be executed or verified in the available environment, identify that limitation instead of claiming it works.
+10. Implementation Priorities
+Prioritize a functioning product over unnecessary complexity.
+Build in this order:
+Database schema and initialization.
+Core Streamlit application and navigation.
+Project registry and industry challenge workflows.
+Talent registration and matching.
+Opportunity scoring and global readiness assessment.
+Executive dashboard and visualizations.
+CSV and PDF reporting.
+Automated tests, documentation, and deployment preparation.
+Maintain a clean architecture so that new features can be added without rewriting the entire application.
+Avoid unnecessary dependencies, expensive infrastructure, and paid services that are not essential to the MVP.
+11. Definition of Success
+Odisha AI Nexus should be a credible, practical starting point for a larger AI innovation ecosystem.
+A successful MVP should allow a user to register an AI project, discover relevant talent, explore industry challenges, assess an opportunity, understand export-readiness gaps, and generate useful reports through a single application.
+It should demonstrate how technology can help connect Odisha's talent, research, businesses, and entrepreneurial ideas with meaningful opportunities.
+The final delivery must clearly distinguish:
+Features that are implemented and tested.
+Features that work with demonstration data.
+Features that depend on external integrations.
+Features that remain planned for future development.
+Build Odisha AI Nexus as a working foundation for real collaboration — not just a dashboard that looks impressive in a screenshot.
+The guiding principle is simple: start locally, solve real problems, build responsibly, and create solutions that can compete globally.
